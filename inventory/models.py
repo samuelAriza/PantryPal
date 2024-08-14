@@ -5,7 +5,7 @@ from django.db import models
 class Product(models.Model):
     name = models.CharField(max_length=20)
     category = models.CharField(max_length=20) 
-    totalQuantity = models.IntegerField()
-    salePrice = models.DecimalField(max_digits=10, decimal_places=2)
+    total_quantity = models.IntegerField()
+    sale_price = models.IntegerField()
     def __str__(self):
         return self.name
