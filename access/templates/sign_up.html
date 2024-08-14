@@ -1,0 +1,15 @@
+{% extends '.\template.html' %}
+{% block title %} Inventory {% endblock %}
+{% block body %}
+
+<div class="row">
+    <h2 class="text-center">Sign up</h2>
+        <form action="/sign_up/" method="POST">
+
+            {{form}}
+
+        </form>
+
+</div>
+
+{% endblock %}

@@ -1,5 +1,5 @@
 {% extends '.\template.html' %}
-{% block title %} Add product {% endblock %}
+{% block title %} Inventory {% endblock %}
 {% block body %}
 
 <div class="row">
@@ -32,6 +32,7 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
+                        <th>#</th>
                         <th>Name</th>
                         <th>Category</th>
                         <th>Total quantity</th>
@@ -42,6 +43,7 @@
                 <tbody>
                     {% for p in products %}
                         <tr>
+                            <td>{{forloop.counter}}</td>
                             <td>{{p.name}}</td>
                             <td>{{p.category}}</td>
                             <td>{{p.total_quantity}}</td>
@@ -49,7 +51,7 @@
                             <td>
                                 <div class="btn-group">
                                     <a href="before_edit_product/{{p.id}}" class="btn btn-success">Edit</a>
-                                    <a href="delete_product/{{p.id}}" class="btn btn-danger">Delete</a>
+                                    <a href="delete_product/{{p.id}}" class="btn btn-danger btn_delete_product">Delete</a>
                                 </div>
                             </td>
                             
