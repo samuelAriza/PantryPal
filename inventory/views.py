@@ -4,8 +4,8 @@ from django.contrib import messages
 
 # Create your views here.
 
-def home(request):
-    return render(request, 'template.html')
+def home_restaurant_chain(request):
+    return render(request, 'template_inventory.html')
 def show_product(request):
     products = Product.objects.all()
     return render(request, 'add_product.html', {'products': products})
