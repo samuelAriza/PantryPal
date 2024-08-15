@@ -37,48 +37,49 @@
     </div>
   </nav>
 
-  <!--     <div class="container py-4">
+  <div class="container py-4">
       <div class="container-md" style="background-color: #f5f5f5;">
         <div class="row" style="background-color: #8fd8ff;">
-          <div class="col-8  align-self-center">
+          <div class="col-sm-12 col-md-6 col-lg-8 align-self-center">
             <div class="container-md bg-white rounded" style="padding: 20px; margin: auto; max-width: 90%;">
               <h1>Bienvenido</h1>
               <p>En este apartado puedes comprar los productos que los restaurantes ofrecen a un menor precio.</p>
             </div>
           </div>
-          <div class="col-4" style="background-color: #8fd8ff;"><img src="\media\sale\pagina\comida.png"></div>
+          <div class="col-sm-12 col-md-6 col-lg-4" style="background-color: #8fd8ff;"><img src="\media\sale\pagina\comida.png"></div>
         </div>
         <br>
-        <ul>
-          {% if products %}
-          <ul>
+        <div class="row">
+            {% if products %}
             {% for product in products %}
-            <div class="card border border-info-subtle" style="width: 18rem;">
-              <img src="{{product.image.url}}" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">{{product.name}}</h5>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item"><span><strong>Precio: </strong></span>{{product.publish_price}} $</li>
-                <li class="list-group-item"><span><strong>Fecha de vencimiento: </strong></span>{{product.quantity}}
-                </li>
-                <li class="list-group-item"><span><strong>Hora de recogida: </strong></span>{{product.start_date}}</li>
-                <li class="list-group-item"><span><strong>Empresa/Restaurante: </strong></span></li>
-                <li class="list-group-item"><span><strong>Lugar: </strong></span></li>
-              </ul>
-            </div>
-          </ul>
-          {% endfor %}
-        </ul>
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                  <div class="card border border-info-subtle" style="width: 18rem;">
+                    <img src="{{product.image.url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{product.name}}</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><span><strong>Precio: </strong></span>{{product.publish_price}} $</li>
+                      <li class="list-group-item"><span><strong>Cantidad: </strong></span>{{product.quantity}}
+                      </li>
+                      <li class="list-group-item"><span><strong>Fecha de inicio:</strong></span>{{product.start_date}}</li>
+                      <li class="list-group-item"><span><strong>Fecha de fin: </strong>{{ product.end_date}}</span></li>
+                    </ul>
+                  </div>
+              </div> 
+            {% endfor %}
+        </div>
         {% else %}
         <div class="alert alert-info" role="alert">
           No hay productos en venta aún
         </div>
         {% endif %}
         </ul>
+        
       </div>
-    </div> -->
-  <div class="row">
+    </div>
+
+  <!--<div class="row">
     {% for product in products %}
     <div class="col-sm-4">
       <div class="card w-85 h-85" style="margin: 50px;">
@@ -95,7 +96,7 @@
       </div>
     </div>
     {%endfor%}
-  </div>
+  </div>-->
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
