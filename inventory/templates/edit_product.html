@@ -1,4 +1,4 @@
-{% extends '.\template_inventory.html' %}
+{% extends 'template_inventory.html' %}
 {% block title %} Edit product {% endblock %}
 {% block body %}
 
@@ -22,8 +22,7 @@
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="input_sale_price" name="input_sale_price" value="{{product.sale_price}}" placeholder="">
                 <label for="floatingInput">Sale price</label>
-            </div>
-            <div class="d-grid gap-2">
+                <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary" type="button">Edit</button>
             </div>
         </form>

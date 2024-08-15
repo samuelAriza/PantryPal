@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from sales_module.models import sale_products
+
 products_sale = []
 products_donate = []
 
