@@ -1,0 +1,59 @@
+{% extends 'template_access_module.html' %}
+{% block title %} Log in {% endblock %}
+{% block body %}
+<div class="container rounded" style="background-color: #808080; padding: 20px;">
+    <div class="container w-70 rounded"style="background-color: #ffff">
+        <div class="row">
+            <div class="col-6 p-0">
+                <form action="{% url 'login' %}" method="POST" id="login_form">
+                    {% csrf_token %}
+                <div class="container rounded d-flex flex-column justify-content-center align-items-center p-2" style="background-color:#E6E6E6;">
+                    <div class="form-group w-75 offset-md-2"">
+                        <label for="username" class="form-label">Email</label>
+                        {{ login_form.username }}
+                    </div>
+                    <div class="form-group w-75 offset-md-2"">
+                        <label for="password" class="form-label">Password</label>
+                        {{ login_form.password }}
+                    </div>
+                    <a href="{% url 'password_reset' %}" style="text-decoration: none; color: #007bff;">Forgot your password?</a>
+                    <button type="submit" class="btn btn-primary mb-2 w-50"style="margin-right: 12px;">Log in</button>
+                </div>
+            </form>
+            </div>
+            <div class="col-6 p-0">
+                <div class="container rounded d-flex flex-column justify-content-center align-items-center h-100" style="background-color:white;Color: #808080;" >
+                    <h1 class="display-1 fw-bold">Log in</h1>
+                    <div class="d-flex" style="color: #808080;">
+                        <p class="mb-0">Don't have an account?&nbsp;</p>
+                        <a href="#" style="text-decoration: none;color:inherit" data-bs-toggle="modal"
+                        data-bs-target="#signup_modal"><u>Sign Up</u></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal fade" id="signup_modal" data-bs-backdrop="true" data-bs-keyboard="false" tabindex="-1" aria-labelledby="signup_modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">How do you want to sign up?</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body d-flex justify-content-center gap-4">
+            <a href="/access/sign_up/?user_type=restaurant%20chain" class="btn btn-primary" style="width: 40%;">
+            Restaurant chain
+            </a>
+            <a href="/access/sign_up/?user_type=foundation" class="btn btn-primary" style="width: 40%;">
+            Foundation
+            </a>
+        </div>
+
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
