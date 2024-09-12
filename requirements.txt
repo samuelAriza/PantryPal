@@ -1,4 +1,5 @@
 Django
+django-cors-headers
 Pillow
 blinker==1.8.2
 channels==4.1.0
@@ -9,7 +10,7 @@ dash-core-components==2.0.0
 dash-html-components==2.0.0
 dash-table==5.0.0
 Django==5.1.1
-django-cors-headers==4.4.0
+
 django-plotly-dash==2.3.1
 dpd-components==0.1.0
 Flask==3.0.3
@@ -40,7 +41,7 @@ dash-core-components==2.0.0
 dash-html-components==2.0.0
 dash-table==5.0.0
 Django==5.1.1
-django-cors-headers==4.4.0
+
 django-plotly-dash==2.3.1
 django-redis==5.4.0
 dpd-components==0.1.0
@@ -87,7 +88,7 @@ dash-html-components==2.0.0
 dash-renderer==1.9.1
 dash-table==5.0.0
 Django==5.1.1
-django-cors-headers==4.4.0
+
 django-plotly-dash==2.3.1
 django-redis==5.4.0
 dpd-components==0.1.0
